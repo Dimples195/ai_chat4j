@@ -1,0 +1,18 @@
+server:
+  port: 18081
+# chatgpt 相关配置
+chatgpt:
+  proxy:
+    host: "127.0.0.1"
+    port: "10810"
+  open_ai_key: ""
+
+qq:
+  enable: true
+  account: 123
+  password: "123"
+  loginMethod: "1" #  登录方式 1为扫码 2为密码
+  acceptNewFriend: true
+  acceptNewGroup: false
+
+
