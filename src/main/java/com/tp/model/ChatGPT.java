@@ -11,21 +11,37 @@ import java.util.Objects;
 
 @Data
 public class ChatGPT {
-
+    /**
+     * 密钥key
+     */
     private String apiKey;
-
-    private String model;
-
+    /**
+     * 对话模型
+     */
+    private String model = "gpt-3.5-turbo";
+    /**
+     * 消息对象
+     */
     private Messages messages;
-
-    private Double temperature;
-
-    private String n;
-
+    /**
+     * 温度 调整文本生成的多样性和创造性
+     */
+    private Double temperature = 1.0;
+    /**
+     * 聊天完成选项数量
+     */
+    private Integer n = 1;
+    /**
+     * 代理对象
+     */
     private Proxy proxy;
-
+    /**
+     * chatGPT编号
+     */
     private String chatId;
-
+    /**
+     * 对话类型
+     */
     private String type;
 
     private ChatGPT() {
@@ -43,18 +59,33 @@ public class ChatGPT {
 
 
     public static class ChatGPTBuilder {
+        /**
+         * 密钥key
+         */
         private String apiKey;
-
+        /**
+         * 对话模型
+         */
         private String model;
-
+        /**
+         * 消息对象
+         */
         private Messages messages;
-
+        /**
+         * 温度 调整文本生成的多样性和创造性
+         */
         private Double temperature;
-
+        /**
+         * 聊天完成选项数量
+         */
         private String n;
-
+        /**
+         * 代理对象
+         */
         private Proxy proxy;
-
+        /**
+         * chatGPT编号
+         */
         private String chatId;
 
         public ChatGPTBuilder() {

@@ -5,14 +5,14 @@ chatgpt:
   proxy:
     host: "127.0.0.1"
     port: "10810"
-  open_ai_key: ""
+  key: "" # 密钥key
 
 qq:
-  enable: true
-  account: 123
-  password: "123"
+  enable: true # 是否启用
+  account: 123 # 账号
+  password: "123" # 密码
   loginMethod: "1" #  登录方式 1为扫码 2为密码
-  acceptNewFriend: true
-  acceptNewGroup: false
+  acceptNewFriend: true # 是否接受新好友请求
+  acceptNewGroup: false # 是否接收新群聊邀请
 
 

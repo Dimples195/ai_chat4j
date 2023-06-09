@@ -16,15 +16,27 @@ public class ChatFactoryImpl implements ChatFactory {
     @Autowired
     ChatConfig chatConfig;
 
+    /**
+     * 创建Chat对象
+     *
+     * @param id 每一个对象的唯一标识
+     * @return Chat对象
+     */
     @Override
     public ChatGPT createChat(String id) {
         return new ChatGPT.ChatGPTBuilder()
                 .setChatId(id)
                 .setProxy(chatConfig)
-                .setApiKey(chatConfig.getOpen_ai_key())
+                .setApiKey(chatConfig.getKey())
                 .build();
     }
 
+    /**
+     * 实现Chat对象复用
+     *
+     * @param id 每一个对象的唯一标识
+     * @return Chat对象
+     */
     @Override
     public ChatGPT getChat(String id) {
         ChatGPT chatGPT = cacheMap.get(id);

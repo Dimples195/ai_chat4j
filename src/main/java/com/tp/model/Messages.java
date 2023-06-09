@@ -5,20 +5,23 @@ import lombok.Data;
 import java.io.Serial;
 import java.io.Serializable;
 
+/**
+ * 消息对象
+ */
 @Data
 public class Messages implements Serializable {
     /**
-     * The role of the author of this message. One of system, user, or assistant.
+     * 消息角色
      */
     private String role;
 
     /**
-     * The contents of the message.
+     * 消息内容
      */
     private String content;
 
     /**
-     * The name of the author of this message. May contain a-z, A-Z, 0-9, and underscores, with a maximum length of 64 characters.
+     * 消息作者名称
      */
     private String name;
 

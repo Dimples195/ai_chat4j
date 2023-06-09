@@ -10,12 +10,20 @@ import org.springframework.stereotype.Repository;
  */
 @Data
 @Repository
-@PropertySource("classpath:application.yml")
 public class ChatConfig {
+    /**
+     * 代理 host
+     */
     @Value("${chatgpt.proxy.host}")
     private String host;
+    /**
+     * 代理端口
+     */
     @Value("${chatgpt.proxy.port}")
     private String port;
-    @Value("${chatgpt.open_ai_key}")
-    private String open_ai_key;
+    /**
+     * openAi key
+     */
+    @Value("${chatgpt.key}")
+    private String key;
 }
